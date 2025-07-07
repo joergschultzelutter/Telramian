@@ -406,7 +406,7 @@ sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 ##Set random pwd at startup
 #echo "pi:$(sudo openssl rand -base64 12 2>&1)" | sudo chpasswd\
 #just above "exit 0" to install these rules on boot.
-sudo sed -i '/^exit 0/i \\nsudo ifconfig eth0 down\nsudo iptables-restore < /etc/iptables.ipv4.nat\n#Set random pwd at startup\n/bin/echo "pi:$(sudo /usr/bin/openssl rand -base64 12 2>&1)" | sudo /usr/sbin/chpasswd\n' /etc/rc.local
+#sudo sed -i '/^exit 0/i \\nsudo ifconfig eth0 down\nsudo iptables-restore < /etc/iptables.ipv4.nat\n#Set random pwd at startup\n/bin/echo "pi:$(sudo /usr/bin/openssl rand -base64 12 2>&1)" | sudo /usr/sbin/chpasswd\n' /etc/rc.local
 
 echo_process 'Setup Access Point control'
 sudo chmod +x $PATH_TELRAAM_SCRIPTS/telraam_ap_control_loop.py
