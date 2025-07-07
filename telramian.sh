@@ -48,12 +48,12 @@ echo_process "------------------------------"
 echo_process "----Telramian installation----"
 echo_process "------------------------------"
 
-echo_process "Setting keyboard to be (Belgian)"
-L='be' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
-sudo dpkg-reconfigure keyboard-configuration -f noninteractive
-sudo invoke-rc.d keyboard-setup start
-sudo setsid sh -c 'exec setupcon -k --force <> /dev/tty1 >&0 2>&1'
-sudo udevadm trigger --subsystem-match=input --action=change
+#echo_process "Setting keyboard to be (Belgian)"
+#L='be' && sudo sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
+#sudo dpkg-reconfigure keyboard-configuration -f noninteractive
+#sudo invoke-rc.d keyboard-setup start
+#sudo setsid sh -c 'exec setupcon -k --force <> /dev/tty1 >&0 2>&1'
+#sudo udevadm trigger --subsystem-match=input --action=change
 
 echo_process "Disabling splash screen"
 CMDLINE=/boot/cmdline.txt
@@ -305,8 +305,8 @@ net.ipv6.conf.all.disable_ipv6=1
 EOT
 sudo sysctl -p
 
-#set the country code to BE for wlan0 in /etc/wpa_supplicant/wpa_supplicant.conf 
-sudo wpa_cli -i wlan0 set country BE
+#set the country code to DE for wlan0 in /etc/wpa_supplicant/wpa_supplicant.conf 
+sudo wpa_cli -i wlan0 set country DE
 sudo wpa_cli -i wlan0 save_config
 
 #Unblock WIFI
@@ -524,9 +524,9 @@ alias m='sudo mysql'
 EOT
 source ~/.bashrc
 
-echo_process 'Disabling SSH"'
-sudo systemctl disable ssh.service
-sudo systemctl stop ssh.service
+#echo_process 'Disabling SSH"'
+#sudo systemctl disable ssh.service
+#sudo systemctl stop ssh.service
 
 # cleanupo opencv folder
 sudo rm -rf $PATH_TELRAAM_RPI
