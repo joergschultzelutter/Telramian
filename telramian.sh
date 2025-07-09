@@ -2,8 +2,7 @@
 # -------------------------------------------------------------
 # Telramian
 # Script to easily install Telraam (https://telraam.net) an rpi
-# OS: Raspberry Pi OS Lite (Buster) version 2020-05-27
-# OS Image URL: https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2020-05-28/
+# OS: Raspberry Pi OS Lite (Bookworm)
 # Python: 3.7.3
 # OpenCV: 4.3.0
 # Based on https://github.com/Telraam/Telraam-RPi
