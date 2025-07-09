@@ -103,7 +103,7 @@ echo_process "install Qt (cross-platform C++ application framework)"
 #libqtwebkit4: QtWebKit provides a Web browser engine that makes it easy to embed content from the World Wide Web into your Qt application.
 #libqt4-test: Qt 4 test module.
 #python3-pyqt5: PyQt5 exposes the Qt5 API to Python 3.
-sudo apt install qt5-default libqtgui4 libqtwebkit4 libqt4-test python3-pyqt5 -y
+sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev libqtgui4 libqtwebkit4 libqt4-test python3-pyqt5 -y
 
 echo_process "Install optimizations libraries"
 #libatlas-base-dev: Automatically Tuned Linear Algebra Software ATLAS is an approach for the automatic generation and optimization of numerical software. Currently ATLAS supplies optimized versions for the complete set of linear algebra kernels known as the Basic Linear Algebra Subroutines (BLAS), and a subset of the linear algebra routines in the LAPACK library.
@@ -118,7 +118,7 @@ echo_process "Install optimizations libraries"
 #libgoogle-glog-dev: library provides logging APIs based on C++-style streams and various helper macros.
 #libgflags-dev: library that implements commandline flags processing for C++.
 #doxygen: Documentation system for C++, C, Java, Objective-C and IDL.
-sudo apt install libatlas-base-dev libtbb-dev libtbb2 libhdf5-dev libhdf5-103 libeigen3-dev liblapacke-dev libprotobuf-dev protobuf-compiler libgoogle-glog-dev libgflags-dev doxygen -y
+sudo apt install libatlas-base-dev libtbb-dev libtbbmalloc2 libhdf5-dev libhdf5-103 libeigen3-dev liblapacke-dev libprotobuf-dev protobuf-compiler libgoogle-glog-dev libgflags-dev doxygen -y
 
 echo_process "install image I/O packages"
 #libjpeg-dev: JPEG library.
