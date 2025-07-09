@@ -3,6 +3,7 @@
 # Telramian
 # Script to easily install Telraam (https://telraam.net) an rpi
 # OS: Raspberry Pi OS Lite (Bookworm)
+# OS Version: Debian Bookworm 2025-05-13
 # Python: 3.7.3
 # OpenCV: 4.3.0
 # Based on https://github.com/Telraam/Telraam-RPi
